@@ -5,5 +5,5 @@ import { SchoolEntity } from "../../school/entities/school.entity";
 @Entity({ tableName: "SchoolAdmins" })
 export class SchoolAdminEntity extends UserEntity {
     @OneToOne(() => SchoolEntity, school => school.adminstrator, { mapToPk: true })
-    school: SchoolEntity;
+    school: string;
 }

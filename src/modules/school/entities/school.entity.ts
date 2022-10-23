@@ -9,7 +9,7 @@ export class SchoolEntity extends AbstractEntity {
     name: string;
 
     @OneToOne(() => SchoolAdminEntity, adminstrator => adminstrator.school, { owner: true, mapToPk: true })
-    adminstrator: SchoolAdminEntity;
+    adminstrator: string;
 
     @ManyToMany({ entity: () => SupervisorEntity })
     supervisors: Collection<SupervisorEntity> = new Collection<SupervisorEntity>(this);
